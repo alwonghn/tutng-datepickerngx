@@ -1,0 +1,22 @@
+<div class="row">
+
+        <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+                 <input class="form-control" placeholder="Datepicker" bsDatepicker #dp="bsDatepicker" [ngStyle]="{'display':displayDatepicker}" [disabled]="disableDatepicker">
+        </div>
+        <!-- <div class="col-xs-12 col-12 col-sm-4 col-md-12 col-lg-4 form-group">
+          <button class="btn btn-success" (click)="toggleDisabled()">Toggle displayDatepicker/disableDatepicker</button>
+        </div> -->
+        
+
+        <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+            <input type="text" class="form-control" placeholder="00/00/YYYY" [disabled]="disableInput" [ngStyle]="{'display':displayInput}">
+        </div>
+  
+        <div class="col-xs-12 col-12 col-sm-4 col-md-12 col-lg-4 form-group">
+          <button class="btn btn-success" (click)="toggleDisabled()">Toggle disable&&ngStyle</button>
+        </div>
+
+        <p>disableInput:{{disableInput}}|displayInput:{{displayInput}}|</p>
+        <p>|displayDatepicker:{{displayDatepicker}}|disableDatepicker:{{disableDatepicker}}</p>
+        
+</div>

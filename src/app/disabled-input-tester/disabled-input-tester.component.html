@@ -1,0 +1,25 @@
+<p>disabled input html works!</p>
+<div class="row">
+
+        <!-- <div class="col-xs-12 col-12 col-sm-6 col-md-4 form-group">
+          <input type="text" class="form-control" placeholder="00/00/YYYY" [disabled]="disableInput" [ngStyle]="{'display':displayInput}">
+        </div>
+
+        <div class="col-xs-12 col-12 col-sm-4 col-md-12 col-lg-4 form-group">
+          <button class="btn btn-success" (click)="toggleDisabled()">Toggle disable&&ngStyle</button>
+        </div>
+        <p>{{disableInput}}:{{displayInput}}</p> -->
+
+
+        <div class="input-group mb-3 col-xs-12 col-12 col-sm-6 col-md-4 form-group" >
+            <input type="text" class="form-control" placeholder="00/00/YYYY" [disabled]="disableInput" [ngStyle]="{'display':displayInput}">
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="button" [ngStyle]="{'display':displayInput}">@</button>
+            </div>
+        </div>
+
+
+        <button class="btn btn-success" (click)="toggleDisabled()">Toggle disable&&ngStyle</button>
+        <p>{{disableInput}}:{{displayInput}}</p>
+
+</div>
