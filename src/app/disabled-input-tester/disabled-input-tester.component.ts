@@ -7,26 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisabledInputTesterComponent implements OnInit {
 
-  disableInput:boolean = true;
+  disableInput: string = "";
   displayInput: string = "none";
 
   constructor() { }
 
   ngOnInit() {
-    this.disableInput=true;
+    this.disableInput="disabled";
     this.displayInput="none";
   }
 
   toggleDisabled(): void {
-    if(this.disableInput==true&&this.displayInput=="none"){
+    if(this.disableInput=="disabled"&&this.displayInput=="none"){
       this.displayInput="block";
-      this.disableInput=false;
-    }else if (this.disableInput==false&&this.displayInput=="block"){
+      this.disableInput="";
+    }else if (this.disableInput==""&&this.displayInput=="block"){
       this.displayInput="none";
-      this.disableInput=true;
+      this.disableInput="disabled";
     }else{
       this.displayInput="none";
-      this.disableInput=true;
+      this.disableInput="disabled";
     }
   }
 

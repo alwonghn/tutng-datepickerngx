@@ -6,49 +6,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./datepicker-ngx-externaltoggle.component.css']
 })
 export class DatepickerNgxExternaltoggleComponent implements OnInit {
-  disableInput:boolean;
   displayInput: string;
-  disableDatepicker:boolean;
+  disableInput: string;
   displayDatepicker: string;
+  disableDatepicker: string;  
 
   constructor() {
     
    }
 
   ngOnInit() {
-    this.disableInput=true;
     this.displayInput="none";
-    this.disableDatepicker=false;
+    this.disableInput="disabled";
     this.displayDatepicker="block";
+    this.disableDatepicker="";    
   }
 
  
   toggleDisabled(): void {
     if(
-      this.disableInput==true
-      &&this.displayInput=="none"
-      &&this.disableDatepicker==false
+      this.displayInput=="none"      
+      &&this.disableInput=="disabled"      
       &&this.displayDatepicker=="block"
+      &&this.disableDatepicker==""
       ){
-      this.disableInput=false;
+      this.displayDatepicker="none";
+      this.disableDatepicker="disabled"; 
       this.displayInput="block";
-      this.disableDatepicker=true;
-      this.displayDatepicker="none";      
+      this.disableInput="";
+           
     }else if (
-      this.disableInput==false
-      &&this.displayInput=="block"
-      &&this.disableDatepicker==true
+      this.displayInput=="block"
+      &&this.disableInput==""
       &&this.displayDatepicker=="none"
+      &&this.disableDatepicker=="disabled"     
       ){
-      this.disableInput=true;
       this.displayInput="none";
-      this.disableDatepicker=false;
-      this.displayDatepicker="block";      
+      this.disableInput="disabled";
+      this.displayDatepicker="block";
+      this.disableDatepicker="";            
     }else{
-      this.disableInput=true;
       this.displayInput="none";
-      this.disableDatepicker=false;
-      this.displayDatepicker="block";      
+      this.disableInput="disabled";
+      this.displayDatepicker="block";
+      this.disableDatepicker="";            
     }   
   }
 }
