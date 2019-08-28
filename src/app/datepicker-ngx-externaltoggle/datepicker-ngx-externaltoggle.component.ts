@@ -9,7 +9,7 @@ export class DatepickerNgxExternaltoggleComponent implements OnInit {
   displayInput: string;
   disableInput: string;
   displayDatepicker: string;
-  disableDatepicker: string;  
+  disableDatepicker: string;
 
   constructor() {
     
@@ -19,7 +19,7 @@ export class DatepickerNgxExternaltoggleComponent implements OnInit {
     this.displayInput="none";
     this.disableInput="disabled";
     this.displayDatepicker="block";
-    this.disableDatepicker="";    
+    this.disableDatepicker="";
   }
 
  
@@ -52,4 +52,12 @@ export class DatepickerNgxExternaltoggleComponent implements OnInit {
       this.disableDatepicker="";            
     }   
   }
+
+  // togglePartDateInput(){
+  //   this.partDateInputOn = !this.partDateInputOn;
+  //   if(this.partDateInputOn){
+
+  //   }
+  // }
+
 }
